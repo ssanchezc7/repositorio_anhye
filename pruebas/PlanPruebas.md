@@ -24,3 +24,4 @@ Validar procesos críticos: registro de usuarios, préstamos y devoluciones, bú
 - Validación: Verificar cálculo de multa y registro en `sanciones` o similar.
 
 (Archivo versión DOCX: `PlanPruebas.docx` como marcador)
+**Evidencia:** pasos de validaci�n ampliados
