@@ -30,3 +30,5 @@ Versi贸n inicial de requerimientos para el Sistema de Gesti贸n de Biblioteca.
 - Se puede ejecutar un pr茅stamo y luego su correspondiente devoluci贸n.
 
 (Archivo versi贸n DOCX: `DRS_v1.docx` (marcador))
+
+**Nota:** revisi髇 1 - a馻dida l韓ea para commit 2
