@@ -28,7 +28,23 @@ Versión inicial de requerimientos para el Sistema de Gestión de Biblioteca.
 ## 6. Criterios de aceptación
 - Los usuarios pueden agregar, modificar y eliminar libros.
 - Se puede ejecutar un préstamo y luego su correspondiente devolución.
+### Criterios de aceptación (detallados)
+- CA-01: Un usuario con rol `bibliotecario` puede crear/editar/eliminar un libro y los cambios se reflejan en el listado en menos de 5s.
+- CA-02: Al registrar un préstamo, se crea un registro en `prestamos` con `usuario_id`, `libro_id`, `fecha_prestamo` y `fecha_devolucion_prevista`.
+- CA-03: Al registrar una devolución tardía, el sistema calcula la multa aplicando la política configurada y la asocia al `usuario_id`.
+- CA-04: Las búsquedas por título/autor/ISBN devuelven resultados relevantes y paginados.
+
+## 7. Flujo básico de préstamo
+1. El bibliotecario busca el libro por ISBN o título.
+2. Selecciona la copia disponible y el usuario que solicita el préstamo.
+3. Registra el préstamo indicando la fecha y la fecha prevista de devolución.
+4. El sistema decrementa el stock disponible y crea el registro en `prestamos`.
+
+## 8. Modelado de datos (resumen)
+- `libros` (id, isbn, titulo, autores, editorial, año, categoria, total_copias, copias_disponibles)
+- `usuarios` (id, nombre, correo, tipo_usuario, estado)
+- `prestamos` (id, libro_id, usuario_id, fecha_prestamo, fecha_devolucion_prevista, fecha_devolucion_real, multa)
 
 (Archivo versión DOCX: `DRS_v1.docx` (marcador))
 
-**Nota:** revisi�n 1 - a�adida l�nea para commit 2
+**Nota:** revisi�n 1 - a�adida l�nea para commit 2

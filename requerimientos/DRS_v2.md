@@ -14,6 +14,16 @@ Versión refinada de requerimientos con mejoras y ajustes después de revisión.
 - RF8: Generación de reportes (libros más prestados, préstamos por usuario, libros atrasados).
 - RF9: Notificaciones por correo para reservas y recordatorios de devolución.
 
+## 4. Escenarios de uso adicionales
+- Reserva automática: cuando un libro no tiene copias disponibles, un usuario puede reservar; al devolver una copia, el primer usuario en cola recibe notificación y tiene 48h para retirar.
+- Exportación de reportes: los administradores pueden programar reportes mensuales en formato CSV.
+
+## 5. Requisitos de seguridad
+- Todas las contraseñas almacenadas con hashing fuerte (bcrypt) y sal.
+- HTTPS obligatorio en producción.
+
+(Archivo versión DOCX: `DRS_v2.docx` (marcador))
+
 ## Requerimientos no funcionales (v2)
 - RNF5: Auditoría de acciones clave (registro de quién ejecutó cada acción y cuándo).
 - RNF6: Encriptación de contraseñas (bcrypt o similar).
